@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "../../lib/ai21/helper"
-
 RSpec.describe AI21::Helper do
   include AI21::Helper
 
