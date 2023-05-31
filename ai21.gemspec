@@ -10,14 +10,12 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Ruby client for AI21 Studio API."
   spec.description = "Ruby client for AI21 Studio API."
-  spec.homepage = "https://github.com"
+  spec.homepage = "https://rubygems.org/gems/ai21"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "https://github.com"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com"
-  spec.metadata["changelog_uri"] = "https://github.com"
+  spec.metadata["source_code_uri"] = "https://github.com/alchaplinsky/ai21"
+  spec.metadata["changelog_uri"] = "https://github.com/alchaplinsky/ai21/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
