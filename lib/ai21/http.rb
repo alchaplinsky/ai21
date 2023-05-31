@@ -8,12 +8,14 @@ require "pry"
 
 module AI21
   module HTTP
+    include AI21::Helper
+
     def get(path)
       url = URI("#{AI21.configuration.uri_base}#{AI21.configuration.api_version}#{path}")
       http = http(url)
       request = get_request(url)
       body = http.request(request).read_body
-      ::JSON.parse(body)
+      camel_to_snake ::JSON.parse(body)
     end
 
     def post(path, body)
@@ -21,7 +23,7 @@ module AI21
       http = http(url)
       request = post_request(url, body)
       body = http.request(request).read_body
-      ::JSON.parse(body)
+      camel_to_snake ::JSON.parse(body)
     end
 
     def get_request(url)

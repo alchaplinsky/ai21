@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require_relative "ai21/version"
-require_relative "ai21/http"
 require_relative "ai21/helper"
-require_relative "ai21/complete"
+require_relative "ai21/http"
 require_relative "ai21/client"
 require_relative "ai21/dataset"
+require_relative "ai21/custom_model"
 
 module AI21
   class Error < StandardError; end
