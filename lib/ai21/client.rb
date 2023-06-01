@@ -49,7 +49,7 @@ module AI21
     end
 
     def dataset
-      @dataset ||= AI21::Dataset.newco
+      @dataset ||= AI21::Dataset.new
     end
 
     def custom_model
