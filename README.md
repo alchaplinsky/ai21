@@ -1,24 +1,81 @@
-# Ai21
+# Ruby client for AI21
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ai21`. To experiment with that code, run `bin/console` for an interactive prompt.
+Use the [Studio AI21](https://www.ai21.com/studio) API with Ruby! Differentiate your product with generative text AI :robot:.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+### Gem install
+Install gem with:
 
-Install the gem and add to the application's Gemfile by executing:
+```
+gem install ai21
+```
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+and require with:
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+```ruby
+require "ai21"
+```
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+### Bundler
+Add gem to your application's `Gemfile`:
+
+```ruby
+gem "ai21"
+```
+
+And then execute:
+
+```
+bundle install
+```
+
+## Getting Started
+
+- Sign up for AI21 Studio here https://studio.ai21.com/sign-up
+- Get your API key from https://studio.ai21.com/account/api-key
 
 ## Usage
 
-TODO: Write usage instructions here
+Instantiate a client
+```ruby
+client = AI21::Client.new "YOUR_API_TOKEN"
+```
+
+#### Completion
+```ruby
+client.complete("The capital of France is ")
+```
+
+#### Intstruct
+```ruby
+client.instruct("Tell me the name of main character in 'The Matrix'")
+```
+
+#### Paraphrase
+```ruby
+client.paraphrase("there is nothing that can't be fixed")
+```
+
+#### Correction
+```ruby
+client.correct("can you fix this speling mistake?")
+```
+
+#### Improvements
+```ruby
+client.improvements("This is a bad decision to let AI control the world")
+```
+
+#### Summarization
+```ruby
+client.summarize("Long text that requires summarization ...")
+```
+
+#### Question Answering
+```ruby
+client.answer("what is the capital of France?", "Capital of France is the city called Paris")
+```
 
 ## Development
 
@@ -28,8 +85,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ai21. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/ai21/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/alchaplinsky/ai21. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/alchaplinsky/ai21/blob/main/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
-Everyone interacting in the Ai21 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/ai21/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Ai21 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/alchaplinsky/ai21/blob/main/CODE_OF_CONDUCT.md).
