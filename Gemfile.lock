@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ai21 (0.1.0)
+    ai21 (0.2.0)
 
 GEM
   remote: https://rubygems.org/
