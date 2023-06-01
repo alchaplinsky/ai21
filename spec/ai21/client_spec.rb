@@ -231,4 +231,20 @@ RSpec.describe AI21::Client do
       end
     end
   end
+
+  describe "#dataset" do
+    subject { client.dataset }
+
+    it "returns a dataset object" do
+      expect(subject).to be_a(AI21::Dataset)
+    end
+  end
+
+  describe "#custom_model" do
+    subject { client.custom_model }
+
+    it "returns a custom model object" do
+      expect(subject).to be_a(AI21::CustomModel)
+    end
+  end
 end
