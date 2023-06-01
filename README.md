@@ -34,6 +34,7 @@ bundle install
 
 - Sign up for AI21 Studio here https://studio.ai21.com/sign-up
 - Get your API key from https://studio.ai21.com/account/api-key
+- Refer to [AI21 API doc](https://docs.ai21.com/reference/) to understand options that can be passed to different tasks
 
 ## Usage
 
