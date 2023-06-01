@@ -32,16 +32,16 @@ module AI21
       AI21::Client.post("/gec", {text: prompt})
     end
 
-    def improvements(prompt, types, options = {})
-      AI21::Client.post("/improvements", {text: prompt, types: types}.merge(snake_to_camel(options)))
+    def improvements(prompt, types = ["fluency"])
+      AI21::Client.post("/improvements", {text: prompt, types: types})
     end
 
-    def summarize(prompt, source_type, options = {})
+    def summarize(prompt, source_type = "TEXT", options = {})
       AI21::Client.post("/summarize", {source: prompt, sourceType: source_type}.merge(snake_to_camel(options)))
     end
 
-    def segmentation(prompt, source_type, options = {})
-      AI21::Client.post("/segmentation", {source: prompt, sourceType: source_type}.merge(snake_to_camel(options)))
+    def segmentation(prompt, source_type = "TEXT")
+      AI21::Client.post("/segmentation", {source: prompt, sourceType: source_type})
     end
 
     def answer(question, context)
