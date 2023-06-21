@@ -232,6 +232,21 @@ RSpec.describe AI21::Client do
     end
   end
 
+  describe "#tokenize" do
+    let(:text) { "what day is today?" }
+
+    context "with text only" do
+      subject { client.tokenize(text) }
+
+      it "sends question and context to the API" do
+        subject
+        expect(Net::HTTP::Post).to have_received(:new).with(URI("https://api.ai21.com/studio/v1/tokenize"))
+        expect(request).to have_received(:[]=).with("Authorization", "Bearer #{token}")
+        expect(request).to have_received(:body=).with("{\"text\":\"what day is today?\"}")
+      end
+    end
+  end
+
   describe "#dataset" do
     subject { client.dataset }
 

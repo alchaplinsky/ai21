@@ -48,6 +48,10 @@ module AI21
       AI21::Client.post("/experimental/answer", {question: question, context: context})
     end
 
+    def tokenize(text)
+      AI21::Client.post("/tokenize", {text: text})
+    end
+
     def dataset
       @dataset ||= AI21::Dataset.new
     end
