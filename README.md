@@ -78,6 +78,11 @@ client.summarize("Long text that requires summarization ...")
 client.answer("what is the capital of France?", "Capital of France is the city called Paris")
 ```
 
+#### Tokenize
+```ruby
+client.tokenize("Lorem ipsum long long tokens!")
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
